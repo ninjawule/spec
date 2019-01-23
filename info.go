@@ -27,8 +27,10 @@ type Extensions map[string]interface{}
 
 // Add adds a value to these extensions
 func (e Extensions) Add(key string, value interface{}) {
-	realKey := strings.ToLower(key)
-	e[realKey] = value
+	// NB: I don't understand the need for this for now
+	// realKey := strings.ToLower(key)
+	// e[realKey] = value
+	e[key] = value
 }
 
 // GetString gets a string value from the extensions
